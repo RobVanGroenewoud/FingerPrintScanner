@@ -1,0 +1,226 @@
+/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 4, ../scss/style.scss */
+body {
+  font-family: sans-serif;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px; }
+
+/* line 12, ../scss/style.scss */
+#scanarea {
+  height: 5cm;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: black 0 0 10px inset;
+  -moz-box-shadow: black 0 0 10px inset;
+  box-shadow: black 0 0 10px inset;
+  background-color: rgba(0, 0, 0, 0.75); }
+  /* line 21, ../scss/style.scss */
+  #scanarea .scanline {
+    height: 2px;
+    margin-top: -10px;
+    background-color: red;
+    -webkit-box-shadow: red 0 0 25px;
+    -moz-box-shadow: red 0 0 25px;
+    box-shadow: red 0 0 25px; }
+  /* line 28, ../scss/style.scss */
+  #scanarea:active {
+    background-image: url(../img/fingerprint.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%; }
+    /* line 34, ../scss/style.scss */
+    #scanarea:active .scanline {
+      -webkit-animation: scan 1.4s infinite alternate ease-in-out; }
+
+/* line 40, ../scss/style.scss */
+.scanner {
+  -webkit-transition: all .3s;
+  background-color: #e5e5e5;
+  padding: .3cm;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: black 5px 5px 25px;
+  -moz-box-shadow: black 5px 5px 25px;
+  box-shadow: black 5px 5px 25px;
+  width: 3cm;
+  margin: -0.3cm auto; }
+
+/* line 51, ../scss/style.scss */
+.search {
+  -webkit-transition: all .3s;
+  -webkit-transform: scale(0.5);
+  opacity: 0;
+  display: none;
+  min-height: 8.5cm;
+  -webkit-box-shadow: limegreen 0px 0px 25px 5px, limegreen 0px 0px 15px 5px inset;
+  -moz-box-shadow: limegreen 0px 0px 25px 5px, limegreen 0px 0px 15px 5px inset;
+  box-shadow: limegreen 0px 0px 25px 5px, limegreen 0px 0px 15px 5px inset;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  /* line 59, ../scss/style.scss */
+  .search h1 {
+    font-family: Consolas, monospace;
+    padding: 10px .2em 0;
+    color: limegreen; }
+
+/* line 67, ../scss/style.scss */
+.searching .search {
+  -webkit-transform: scale(1);
+  opacity: 1;
+  display: block; }
+/* line 73, ../scss/style.scss */
+.searching .scannedprint {
+  position: absolute;
+  left: 10%;
+  width: 200px;
+  height: 300px;
+  background-image: url(../img/fingerprint.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%; }
+/* line 84, ../scss/style.scss */
+.searching .sampleprint {
+  position: absolute;
+  right: 10%;
+  width: 200px;
+  height: 300px;
+  background-image: url(../img/fingerprint-sprite.png);
+  -webkit-animation: play 0.5s steps(5) infinite; }
+/* line 93, ../scss/style.scss */
+.searching .scanner {
+  opacity: 0;
+  margin-top: -5cm; }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* line 102, ../scss/style.scss */
+  .scannedprint {
+    display: none; } }
+/* line 108, ../scss/style.scss */
+.matchfound .sampleprint {
+  position: absolute;
+  right: 10%;
+  width: 200px;
+  height: 300px;
+  background-image: url(../img/fingerprint.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;
+  -webkit-animation: none; }
+/* line 120, ../scss/style.scss */
+.matchfound .match {
+  display: block; }
+
+/* line 127, ../scss/style.scss */
+.match {
+  position: relative;
+  display: none;
+  padding-top: 3cm; }
+  /* line 131, ../scss/style.scss */
+  .match span {
+    background-color: green;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: .5em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: green 0 0 20px;
+    -moz-box-shadow: green 0 0 20px;
+    box-shadow: green 0 0 20px;
+    text-shadow: black 0 0 5px;
+    -webkit-animation: pulse .3s infinite alternate ease-in-out; }
+
+@-webkit-keyframes pulse {
+  /* line 147, ../scss/style.scss */
+  0% {
+    opacity: .75; }
+
+  /* line 148, ../scss/style.scss */
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes scan {
+  /* line 152, ../scss/style.scss */
+  0% {
+    -webkit-transform: translate3d(0, -10px, 0); }
+
+  /* line 153, ../scss/style.scss */
+  100% {
+    -webkit-transform: translate3d(0, 5.2cm, 0); } }
+
+@-webkit-keyframes play {
+  /* line 157, ../scss/style.scss */
+  from {
+    background-position: 0px; }
+
+  /* line 158, ../scss/style.scss */
+  to {
+    background-position: -1000px; } }
