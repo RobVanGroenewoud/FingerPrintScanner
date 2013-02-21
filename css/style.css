@@ -175,12 +175,12 @@ body {
 .matchfound .match {
   display: block; }
 
-/* line 127, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 .match {
   position: relative;
   display: none;
   padding-top: 3cm; }
-  /* line 131, ../scss/style.scss */
+  /* line 129, ../scss/style.scss */
   .match span {
     background-color: green;
     color: #fff;
@@ -198,29 +198,62 @@ body {
     text-shadow: black 0 0 5px;
     -webkit-animation: pulse .3s infinite alternate ease-in-out; }
 
+/* line 142, ../scss/style.scss */
+.file {
+  -webkit-transition: all .3s;
+  -webkit-transform: scale(0.5);
+  opacity: 0;
+  display: none;
+  background-color: #fff;
+  padding: 1cm;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+  /* line 153, ../scss/style.scss */
+  .file img {
+    max-width: 100%; }
+
+/* line 159, ../scss/style.scss */
+.showfile .file {
+  display: block;
+  -webkit-transform: scale(1);
+  opacity: 1; }
+/* line 164, ../scss/style.scss */
+.showfile .scanner {
+  opacity: 0;
+  margin-top: -5cm; }
+/* line 169, ../scss/style.scss */
+.showfile p {
+  color: #000;
+  font-family: monospace;
+  padding: .5em;
+  font-size: 2em; }
+
 @-webkit-keyframes pulse {
-  /* line 147, ../scss/style.scss */
+  /* line 180, ../scss/style.scss */
   0% {
     opacity: .75; }
 
-  /* line 148, ../scss/style.scss */
+  /* line 181, ../scss/style.scss */
   100% {
     opacity: 1; } }
 
 @-webkit-keyframes scan {
-  /* line 152, ../scss/style.scss */
+  /* line 185, ../scss/style.scss */
   0% {
     -webkit-transform: translate3d(0, -10px, 0); }
 
-  /* line 153, ../scss/style.scss */
+  /* line 186, ../scss/style.scss */
   100% {
     -webkit-transform: translate3d(0, 5.2cm, 0); } }
 
 @-webkit-keyframes play {
-  /* line 157, ../scss/style.scss */
+  /* line 190, ../scss/style.scss */
   from {
     background-position: 0px; }
 
-  /* line 158, ../scss/style.scss */
+  /* line 191, ../scss/style.scss */
   to {
     background-position: -1000px; } }

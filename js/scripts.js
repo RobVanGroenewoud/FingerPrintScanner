@@ -19,8 +19,15 @@
 		});
 
 		$('.match').on('click', function(){
-			$('body').removeClass('searching');
-			$('body').removeClass('matchfound');
+			var body = $('body');
+			body.removeClass('searching');
+			body.removeClass('matchfound');
+			body.addClass('showfile');
+		});
+
+		$('.reset').on('click', function(){
+			var body = $('body');
+			body.removeClass('showfile');
 		});
 	});
 
