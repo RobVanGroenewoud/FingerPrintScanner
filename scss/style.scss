@@ -9,6 +9,11 @@ body {
 	padding: 20px;
 }
 
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 #scanarea {
 	height: 5cm;
 	margin: 0 auto;
@@ -143,12 +148,12 @@ and (max-width : 320px) {
 	-webkit-transition: all .3s;
 	-webkit-transform: scale(.5);
 	opacity: 0;
-	
+
 	display: none;
 	background-color: #fff;
 	padding: 1cm;
 	@include border-radius(3px);
-	
+	@include box-shadow(#000 5px 5px 25px);
 
 	img {
 		max-width: 100%;

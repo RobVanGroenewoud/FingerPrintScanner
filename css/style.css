@@ -63,6 +63,11 @@ body {
   padding: 20px; }
 
 /* line 12, ../scss/style.scss */
+.container {
+  max-width: 600px;
+  margin: 0 auto; }
+
+/* line 17, ../scss/style.scss */
 #scanarea {
   height: 5cm;
   margin: 0 auto;
@@ -72,7 +77,7 @@ body {
   -moz-box-shadow: black 0 0 10px inset;
   box-shadow: black 0 0 10px inset;
   background-color: rgba(0, 0, 0, 0.75); }
-  /* line 21, ../scss/style.scss */
+  /* line 26, ../scss/style.scss */
   #scanarea .scanline {
     height: 2px;
     margin-top: -10px;
@@ -80,17 +85,17 @@ body {
     -webkit-box-shadow: red 0 0 25px;
     -moz-box-shadow: red 0 0 25px;
     box-shadow: red 0 0 25px; }
-  /* line 28, ../scss/style.scss */
+  /* line 33, ../scss/style.scss */
   #scanarea:active {
     background-image: url(../img/fingerprint.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 80%; }
-    /* line 34, ../scss/style.scss */
+    /* line 39, ../scss/style.scss */
     #scanarea:active .scanline {
       -webkit-animation: scan 1.4s infinite alternate ease-in-out; }
 
-/* line 40, ../scss/style.scss */
+/* line 45, ../scss/style.scss */
 .scanner {
   -webkit-transition: all .3s;
   background-color: #e5e5e5;
@@ -106,7 +111,7 @@ body {
   width: 3cm;
   margin: -0.3cm auto; }
 
-/* line 51, ../scss/style.scss */
+/* line 56, ../scss/style.scss */
 .search {
   -webkit-transition: all .3s;
   -webkit-transform: scale(0.5);
@@ -121,18 +126,18 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
-  /* line 59, ../scss/style.scss */
+  /* line 64, ../scss/style.scss */
   .search h1 {
     font-family: Consolas, monospace;
     padding: 10px .2em 0;
     color: limegreen; }
 
-/* line 67, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .searching .search {
   -webkit-transform: scale(1);
   opacity: 1;
   display: block; }
-/* line 73, ../scss/style.scss */
+/* line 78, ../scss/style.scss */
 .searching .scannedprint {
   position: absolute;
   left: 10%;
@@ -142,7 +147,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 80%; }
-/* line 84, ../scss/style.scss */
+/* line 89, ../scss/style.scss */
 .searching .sampleprint {
   position: absolute;
   right: 10%;
@@ -150,17 +155,17 @@ body {
   height: 300px;
   background-image: url(../img/fingerprint-sprite.png);
   -webkit-animation: play 0.5s steps(5) infinite; }
-/* line 93, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .searching .scanner {
   opacity: 0;
   margin-top: -5cm; }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
-  /* line 102, ../scss/style.scss */
+  /* line 107, ../scss/style.scss */
   .scannedprint {
     display: none; } }
-/* line 108, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .matchfound .sampleprint {
   position: absolute;
   right: 10%;
@@ -171,16 +176,16 @@ body {
   background-position: center center;
   background-size: 80%;
   -webkit-animation: none; }
-/* line 120, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 .matchfound .match {
   display: block; }
 
-/* line 125, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .match {
   position: relative;
   display: none;
   padding-top: 3cm; }
-  /* line 129, ../scss/style.scss */
+  /* line 134, ../scss/style.scss */
   .match span {
     background-color: green;
     color: #fff;
@@ -198,7 +203,7 @@ body {
     text-shadow: black 0 0 5px;
     -webkit-animation: pulse .3s infinite alternate ease-in-out; }
 
-/* line 142, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .file {
   -webkit-transition: all .3s;
   -webkit-transform: scale(0.5);
@@ -210,21 +215,24 @@ body {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px; }
-  /* line 153, ../scss/style.scss */
+  border-radius: 3px;
+  -webkit-box-shadow: black 5px 5px 25px;
+  -moz-box-shadow: black 5px 5px 25px;
+  box-shadow: black 5px 5px 25px; }
+  /* line 158, ../scss/style.scss */
   .file img {
     max-width: 100%; }
 
-/* line 159, ../scss/style.scss */
+/* line 164, ../scss/style.scss */
 .showfile .file {
   display: block;
   -webkit-transform: scale(1);
   opacity: 1; }
-/* line 164, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 .showfile .scanner {
   opacity: 0;
   margin-top: -5cm; }
-/* line 169, ../scss/style.scss */
+/* line 174, ../scss/style.scss */
 .showfile p {
   color: #000;
   font-family: monospace;
@@ -232,28 +240,28 @@ body {
   font-size: 2em; }
 
 @-webkit-keyframes pulse {
-  /* line 180, ../scss/style.scss */
+  /* line 185, ../scss/style.scss */
   0% {
     opacity: .75; }
 
-  /* line 181, ../scss/style.scss */
+  /* line 186, ../scss/style.scss */
   100% {
     opacity: 1; } }
 
 @-webkit-keyframes scan {
-  /* line 185, ../scss/style.scss */
+  /* line 190, ../scss/style.scss */
   0% {
     -webkit-transform: translate3d(0, -10px, 0); }
 
-  /* line 186, ../scss/style.scss */
+  /* line 191, ../scss/style.scss */
   100% {
     -webkit-transform: translate3d(0, 5.2cm, 0); } }
 
 @-webkit-keyframes play {
-  /* line 190, ../scss/style.scss */
+  /* line 195, ../scss/style.scss */
   from {
     background-position: 0px; }
 
-  /* line 191, ../scss/style.scss */
+  /* line 196, ../scss/style.scss */
   to {
     background-position: -1000px; } }
